@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><circle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22%233b6fd8%22/></svg>" />
+  <title>SupplyGraph — Supplier Digital Twin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
+          <circle cx="6" cy="6" r="2.2"/><circle cx="18" cy="6" r="2.2"/><circle cx="12" cy="18" r="2.2"/>
+          <circle cx="12" cy="11" r="1.6"/><path d="M7.7 7.3 10.8 10M16.3 7.3 13.2 10M12 12.6V15.8"/>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-name">SUPPLY<span>GRAPH</span></div>
+        <div class="brand-sub">SUPPLIER DIGITAL TWIN • EXPOSURE COMMAND CENTER</div>
+      </div>
+    </div>
+    <div class="status" id="status"><span class="dot"></span><span id="status-text">CONNECTING…</span></div>
+  </header>
+
+  <section class="topbar">
+    <div class="field">
+      <label class="eyebrow" for="supplier-select">Select supplier</label>
+      <select id="supplier-select"></select>
+    </div>
+    <div class="mission">
+      <div class="eyebrow">Mission</div>
+      <div>Understand exposure before disruption becomes a crisis.</div>
+    </div>
+    <button class="btn btn-primary" id="why-btn">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>
+      Why am I exposed?
+    </button>
+  </section>
+
+  <main class="layout">
+    <!-- LEFT: supplier profile -->
+    <aside class="panel left" id="profile">
+      <div class="eyebrow">Supplier profile</div>
+      <h2 id="p-name">—</h2>
+      <div class="chips" id="p-chips"></div>
+      <div class="tiles">
+        <div class="tile"><div class="tile-label">Annual spend</div><div class="tile-value" id="p-spend">—</div></div>
+        <div class="tile"><div class="tile-label">Category</div><div class="tile-value" id="p-category">—</div></div>
+        <div class="tile"><div class="tile-label">Dependency</div><div class="tile-value" id="p-dependency">—</div></div>
+        <div class="tile"><div class="tile-label">Inventory cover</div><div class="tile-value" id="p-inventory">—</div></div>
+      </div>
+      <div class="divider"></div>
+      <div class="eyebrow">Exposure</div>
+      <div class="score-row">
+        <div class="score" id="p-score">—</div>
+        <div><div class="score-level" id="p-level">—</div><div class="muted small">overall exposure</div></div>
+      </div>
+      <div id="p-bars"></div>
+      <div class="divider"></div>
+      <div class="eyebrow">Impact radius</div>
+      <div id="p-impact" class="impact small"></div>
+    </aside>
+
+    <!-- CENTER: tabs -->
+    <section class="panel center">
+      <nav class="tabs">
+        <button class="tab" data-tab="twin">Digital twin</button>
+        <button class="tab active" data-tab="sim">What-if simulator</button>
+        <button class="tab" data-tab="portfolio">Portfolio</button>
+      </nav>
+
+      <div class="tab-body" id="tab-twin" hidden>
+        <div class="twin-toolbar">
+          <div class="seg">
+            <button class="seg-btn active" data-view="ego">Supplier view</button>
+            <button class="seg-btn" data-view="full">Full network</button>
+          </div>
+          <div class="legend" id="legend"></div>
+        </div>
+        <div class="graph-wrap" id="graph-wrap">
+          <svg id="graph" width="100%" height="100%"></svg>
+          <div class="zoom">
+            <button id="zoom-in" title="Zoom in">+</button>
+            <button id="zoom-out" title="Zoom out">−</button>
+            <button id="zoom-fit" title="Fit">⤢</button>
+          </div>
+          <div class="node-card" id="node-card" hidden></div>
+        </div>
+      </div>
+
+      <div class="tab-body" id="tab-sim">
+        <div class="sim-head">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#5b8cff" stroke-width="1.8"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+          <div>
+            <div class="eyebrow">Disruption scenario</div>
+            <h1>What if this supplier stops delivering?</h1>
+            <div class="muted small">Test the timing gap between inventory, alternatives and contractual response.</div>
+          </div>
+        </div>
+        <div class="card slider-card">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg>
+          <div class="slider-col">
+            <div class="muted small">Disruption duration</div>
+            <input type="range" id="duration" min="1" max="120" value="30" />
+          </div>
+          <div class="duration-value"><span id="duration-value">30</span> days</div>
+        </div>
+        <button class="btn btn-primary" id="run-btn">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4l14 8-14 8z"/></svg>
+          Run scenario
+        </button>
+        <div id="sim-result"></div>
+      </div>
+
+      <div class="tab-body" id="tab-portfolio" hidden>
+        <div class="eyebrow">Supplier portfolio</div>
+        <h1 class="mb">Where is exposure concentrated?</h1>
+        <div id="portfolio"></div>
+      </div>
+    </section>
+
+    <!-- RIGHT: advisor -->
+    <aside class="panel right">
+      <div class="eyebrow">AI advisor</div>
+      <div class="card advisor-intro">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#5b8cff" stroke-width="2"><path d="M4 14a8 8 0 1 1 16 0"/><path d="M12 14l4-4"/></svg>
+        <div><div class="strong">Evidence-first reasoning</div><div class="muted xsmall">Ask about the supplier, contract or next action.</div></div>
+      </div>
+      <div class="quick">
+        <button data-q="Why am I exposed?">Why?</button>
+        <button data-q="What does the contract say?">Contract</button>
+        <button data-q="What should we do next?">What next?</button>
+        <button data-q="Which alternatives can we use?">Alternatives</button>
+        <button data-q="What products are impacted?">Impact</button>
+      </div>
+      <textarea id="question" rows="3">Why am I exposed?</textarea>
+      <button class="btn btn-primary wide" id="ask-btn">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17h.01"/></svg>
+        Ask advisor
+      </button>
+      <div id="answer"></div>
+      <div class="divider"></div>
+      <div class="eyebrow">Evidence trail</div>
+      <div id="evidence"></div>
+    </aside>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
