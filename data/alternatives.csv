@@ -1,0 +1,14 @@
+supplier_id,alt_name,alt_country,qualified,spare_capacity_pct,ramp_up_days
+SUP-001,Example Finnish Silicon Oy,FI,true,25,30
+SUP-001,Example German Microchips GmbH,DE,false,30,75
+SUP-002,Example Nordic Semiconductors AB,SE,true,15,45
+SUP-002,Example US Foundry Inc,US,true,20,60
+SUP-003,Example Malaysia EMS Sdn Bhd,MY,true,20,21
+SUP-003,Example Poland EMS Sp. z o.o.,PL,true,10,28
+SUP-003,Example Mexico EMS SA,MX,false,25,60
+SUP-004,Example Secondary Cloud Region,DE,true,50,14
+SUP-004,Example Alternative Hyperscaler,US,false,60,90
+SUP-005,Example Nordic IT Partner,SE,true,25,21
+SUP-005,Example Vietnam Dev Centre,VN,false,30,45
+SUP-006,Example Hamburg Freight GmbH,DE,true,30,10
+SUP-006,Example Gothenburg Logistics AB,SE,true,15,20

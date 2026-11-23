@@ -1,0 +1,7 @@
+supplier_id,credit_score,debt_to_equity,profit_margin_pct,payment_delay_days,source
+SUP-001,70,0.9,6,35,Synthetic demo financial data
+SUP-002,62,1.4,9,20,Synthetic demo financial data
+SUP-003,25,2.4,-2,45,Synthetic demo financial data
+SUP-004,88,0.6,18,5,Synthetic demo financial data
+SUP-005,58,1.1,7,30,Synthetic demo financial data
+SUP-006,48,1.9,3,40,Synthetic demo financial data

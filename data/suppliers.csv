@@ -1,0 +1,7 @@
+supplier_id,name,country_code,category,criticality,annual_spend_sek,dependency_pct,inventory_cover_days,stockable
+SUP-001,Example Nordic Semiconductors AB,SE,Semiconductors,Critical,25000000,72,5,true
+SUP-002,Example Taiwan Components Co,TW,Semiconductors,Critical,42000000,64,12,true
+SUP-003,Example Shenzhen Electronics Ltd,CN,Electronics Manufacturing,Critical,31000000,91,3,true
+SUP-004,Example Cloud Provider,IE,Cloud Services,High,18000000,80,0,false
+SUP-005,Example IT Consultancy,IN,IT Services,Medium,9500000,45,0,false
+SUP-006,Example Logistics Provider,NL,Logistics,High,14000000,58,7,false

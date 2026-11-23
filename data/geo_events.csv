@@ -1,0 +1,9 @@
+event_id,country_code,date,type,severity,description
+EV-01,CN,2026-09-14,Trade restriction,6,New export licensing requirements announced for selected electronic sub-assemblies
+EV-02,CN,2026-07-02,Port congestion,4,Container congestion at southern China ports extending lead times
+EV-03,TW,2026-10-03,Regional tension,7,Military exercises near shipping lanes raise logistics uncertainty
+EV-04,TW,2026-08-19,Natural hazard,5,Typhoon causes two-day fab shutdown in industrial park
+EV-05,SE,2026-06-11,Labour,2,Short regional transport strike
+EV-06,IN,2026-08-27,Infrastructure,4,Regional power outages affecting delivery centres
+EV-07,NL,2026-05-20,Logistics,3,Rotterdam terminal IT outage delays inbound freight
+EV-08,IE,2026-04-08,Energy,3,Grid capacity constraints for new data-centre connections

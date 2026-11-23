@@ -1,0 +1,15 @@
+country_code,country,region,country_risk_index
+SE,Sweden,Europe,20
+TW,Taiwan,Asia,55
+CN,China,Asia,60
+IE,Ireland,Europe,15
+IN,India,Asia,45
+NL,Netherlands,Europe,15
+MY,Malaysia,Asia,35
+PL,Poland,Europe,25
+MX,Mexico,Americas,45
+VN,Vietnam,Asia,40
+DE,Germany,Europe,15
+FI,Finland,Europe,15
+US,United States,Americas,25
+EE,Estonia,Europe,20

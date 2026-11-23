@@ -1,0 +1,5 @@
+line_id,name,site,site_country,revenue_criticality
+PL-RAN,Radio access units,Ericsson Tallinn site (example),EE,Critical
+PL-TRN,Transport and microwave,Ericsson Borås site (example),SE,High
+PL-CORE,Core network software,Ericsson Kista R&D (example),SE,Critical
+PL-SVC,Managed services,Ericsson Service Hub (example),SE,High

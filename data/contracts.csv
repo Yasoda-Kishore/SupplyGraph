@@ -1,0 +1,7 @@
+contract_id,supplier_id,termination_notice_days,has_continuity_clause,exclusive,has_penalty_clause,expiry_date
+CTR-001,SUP-001,90,false,true,true,2027-12-31
+CTR-002,SUP-002,60,true,false,true,2028-06-30
+CTR-003,SUP-003,120,false,true,false,2027-03-31
+CTR-004,SUP-004,180,true,true,true,2029-01-31
+CTR-005,SUP-005,30,true,false,true,2027-09-30
+CTR-006,SUP-006,60,false,false,true,2027-06-30

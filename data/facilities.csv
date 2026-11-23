@@ -1,0 +1,10 @@
+facility_id,supplier_id,name,city,country_code,type
+FAC-01,SUP-001,Kista wafer fab,Stockholm,SE,Fabrication
+FAC-02,SUP-002,Hsinchu fab 2,Hsinchu,TW,Fabrication
+FAC-03,SUP-002,Kaohsiung packaging,Kaohsiung,TW,Packaging
+FAC-04,SUP-003,Shenzhen SMT plant,Shenzhen,CN,Assembly
+FAC-05,SUP-004,Dublin region DC,Dublin,IE,Data centre
+FAC-06,SUP-004,Frankfurt region DC,Frankfurt,DE,Data centre
+FAC-07,SUP-005,Bengaluru delivery centre,Bengaluru,IN,Delivery centre
+FAC-08,SUP-005,Pune delivery centre,Pune,IN,Delivery centre
+FAC-09,SUP-006,Rotterdam hub,Rotterdam,NL,Warehouse

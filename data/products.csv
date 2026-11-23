@@ -1,0 +1,12 @@
+product_id,supplier_id,component,line_id,share_of_line_pct
+PRD-01,SUP-001,RF front-end ICs,PL-RAN,35
+PRD-02,SUP-001,Power management ICs,PL-TRN,20
+PRD-03,SUP-002,Baseband SoCs,PL-RAN,45
+PRD-04,SUP-002,FPGA modules,PL-TRN,30
+PRD-05,SUP-003,Network equipment assemblies,PL-RAN,40
+PRD-06,SUP-003,PCB assemblies,PL-TRN,25
+PRD-07,SUP-004,Cloud hosting for core CI/CD,PL-CORE,60
+PRD-08,SUP-005,Test automation services,PL-CORE,20
+PRD-09,SUP-005,OSS integration services,PL-SVC,30
+PRD-10,SUP-006,Inbound freight Europe,PL-RAN,15
+PRD-11,SUP-006,Spare parts distribution,PL-SVC,40

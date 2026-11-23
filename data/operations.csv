@@ -1,0 +1,7 @@
+supplier_id,on_time_delivery_pct,defect_ppm,capacity_utilization_pct,single_site
+SUP-001,93,300,92,true
+SUP-002,95,250,96,false
+SUP-003,85,800,88,true
+SUP-004,99,0,75,false
+SUP-005,90,0,85,false
+SUP-006,88,0,90,false
